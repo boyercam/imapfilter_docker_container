@@ -6,8 +6,9 @@ name: Docker
 # documentation.
 
 on:
-  schedule:
-    - cron: '37 5 * * *'
+  #This build action doesn't need to occurr as frequently with cron. Only do it on a push/pull
+  #schedule:
+  #  - cron: '37 5 * * *'
   push:
     branches: [ "main" ]
     # Publish semver tags as releases.
